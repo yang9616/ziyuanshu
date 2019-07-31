@@ -1,0 +1,186 @@
+/* pages/playTour/playTour.wxss */
+
+.header {
+    height: 140rpx;
+    width: 100%;
+    background: #00a97f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 164rpx;
+}
+
+.logo {
+    width: 206rpx;
+    height: 60rpx;
+}
+
+.content {
+    width: 656rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 60rpx;
+}
+
+.item {
+    width: 200rpx;
+    height: 120rpx;
+    border: 1px solid #58cdda;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #52cdda;
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+}
+
+.activeclass {
+    background-color: #00a97f !important;
+    color: #ffffff !important;
+}
+
+.num {
+    font-size: 46rpx;
+}
+
+.yuan {
+    font-size: 26rpx;
+    margin: 10rpx 0 0 5rpx
+}
+
+.active {
+    background: #52cdda;
+    color: #fff;
+}
+
+.btn {
+    width: 656rpx;
+    height: 84rpx;
+    background: #f0f3f5;
+    font-size: 30rpx;
+    margin-bottom: 37rpx;
+    border-radius: 20rpx;
+}
+
+.atOnce {
+    background: #0057af;
+    color: #fff
+}
+
+.btn::after {
+    border: none
+}
+
+.footer {
+    font-size: 24rpx;
+    color: #969696;
+    text-align: center;
+}
+
+
+/* 弹出框 */
+
+.model-titel {
+    background: #f2f2f2;
+    height: 96rpx;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.close {
+    width: 36rpx;
+    height: 36rpx;
+    background: #aeaeae;
+    line-height: 36rpx;
+    text-align: center;
+    color: #fff;
+}
+
+
+/*mask*/
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+
+/*content*/
+
+.drawer_box {
+    width: 564rpx;
+    height: 390rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 60%;
+    left: 5%;
+    z-index: 1001;
+    background: #fff;
+    margin: -150px 50rpx 0 50rpx;
+    border-radius: 3px;
+    font-size: 26rpx;
+}
+
+.drawer_title {
+    padding: 15px;
+    text-align: center;
+}
+
+.drawer_content {
+    overflow-y: scroll;
+    /* width: 490rpx; */
+    /*超出父盒子高度可滚动*/
+    margin-top: 40rpx;
+}
+
+.hint {
+    color: red;
+    width: 490rpx;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    font-size: 22rpx;
+}
+
+.btn_ok {
+    width: 490rpx;
+    height: 80rpx;
+    background: #0057af;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    margin-top: 32rpx;
+    border-radius: 0;
+}
+
+.title {
+    margin: 0 15rpx;
+    width: 180rpx;
+    font-size: 30rpx;
+}
+
+input {
+    font-size: 30rpx;
+}
+
+.grid {
+    width: 490rpx;
+    height: 90rpx;
+    margin: 0 auto;
+    border: 1px solid #dfdfdf;
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}

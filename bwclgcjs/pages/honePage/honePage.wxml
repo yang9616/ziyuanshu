@@ -1,0 +1,55 @@
+<view class="homePage" style="background-image:url('https://static.pengyaou.com/admin/uploadfile/thumb/bgd_02.jpg');background-position: center bottom;background-repeat: no-repeat; background-color: #0156b0;background-size: 100%;">
+
+    <view class="">
+        <image class="logo" src="../../image/logo_03.png">
+        </image>
+        <view class="content">
+            <view class="" hover-class="none" hover-stop-propagation="false">
+                <view class="homeTitel">
+                    <text class="">
+                    直径大于1000mm的均可按平壁保温方式进行计算
+                </text>
+                </view>
+                <view class="contentImg">
+                    <view class="contentLeft">
+                        <view class="contentOne" bindtap="projectCount">
+                            <image class="contentOneImg" src="../../image/center_10.png">
+                            </image>
+                            <view class="contentOneTxt">
+                                工程量计算
+                            </view>
+                        </view>
+                        <view class="content-bottom" bindtap="pipelineCount">
+                            <image class="contentOneImg content2" src="../../image/content2_22.png">
+                            </image>
+                            <view class="contentOneTxt">
+                                管道保温计算
+                            </view>
+                        </view>
+                    </view>
+                    <image class="centerImg" src="../../image/center_07.png">
+                    </image>
+                    <view class="contentRight">
+                        <view class="contentOne" bindtap="planomural">
+                            <image class="contentOneImg content3" src="../../image/content3_14.png">
+                            </image>
+                            <view class="contentOneTxt">
+                                平壁保温计算
+                            </view>
+                        </view>
+                        <view class="content-bottom">
+                            <image class="contentOneImg content4" src="../../image/content4_19.png">
+                            </image>
+                            <view class="contentOneTxt content4Txt">
+                                其他（敬请期待）
+                            </view>
+                        </view>
+                    </view>
+
+                </view>
+            </view>
+
+        </view>
+    </view>
+
+</view>

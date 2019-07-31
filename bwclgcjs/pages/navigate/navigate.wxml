@@ -1,0 +1,2 @@
+<!--pages/navigate/navigate.wxml-->
+<web-view src="{{url}}"></web-view>

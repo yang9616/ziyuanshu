@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/index/index",
+        
+        "pages/pipingInsulationFour/pipingInsulationFour",
+        
+        "pages/pipelineCount/pipelineCount",
+        
+        
+        
+        "pages/pipingInsulationSeven/pipingInsulationSeven",
+        
+        "pages/pipingInsulationSix/pipingInsulationSix",
+        
+        "pages/pipingInsulationTwo/pipingInsulationTwo",
+        "pages/pipingInsulationOne/pipingInsulationOne",
+        
+        
+        "pages/planomural/planomural",
+        
+        "pages/projectCount/projectCount",
+        
+        "pages/planomuralCountTwo/planomuralCountTwo",
+        
+        
+        "pages/planomuralCount/planomuralCount",
+        
+        "pages/honePage/honePage",
+        "pages/playTour/playTour",
+        "pages/pipingInsulationFive/pipingInsulationFive",
+        "pages/pipingInsulationThree/pipingInsulationThree",
+        "pages/planomuralCountFour/planomuralCountFour",
+        "pages/planomuralCountThree/planomuralCountThree",
+        "pages/navigate/navigate"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "保温材料工程计算",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json"
+}

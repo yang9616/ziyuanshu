@@ -1,0 +1,109 @@
+<view class="all">
+    <scroll-view class="" scroll-y>
+        <view class="header">
+            <view class="logo">
+                <image class="headerImg" src="../../image/bgd-pipingInsulation_03.png">
+                </image>
+                <view class="">
+                    允许温度降下的保温厚度计算
+                </view>
+            </view>
+        </view>
+        <view class="explain">
+            所有公式均参考GB/T 8175进行设计，数据仅做参考，不作为设计标准
+        </view>
+        <!-- 错误提示 -->
+        <view class="error" wx:if="{{error}}" bindtap="close">
+            <view class="err-content">
+                <view class="icon">
+                    X
+                </view>
+                <view class="">
+                    {{errIndex==1?err1:err2}}
+                </view>
+            </view>
+
+        </view>
+        <form class="form" bindsubmit="form">
+            <block wx:for="{{itemTxtStart}}" wx:key="{{index}}">
+                <view class="item">
+                    <view class="itemTxt">
+                        <view class="start">
+                            *
+                        </view>
+                        <view class="">
+                            {{item[0]}}
+                        </view>
+                    </view>
+                    <input type="text" class="{{startIndex==index?'focus':''}}" bindinput="startInput" bindfocus="startFocus" bindblur="startBlur" name="{{item[1]}}" data-index="{{index}}" />
+                </view>
+            </block>
+            <block wx:for="{{itemTxt}}" wx:key="{{index}}">
+                <view class="item">
+                    <view class="itemTxt">
+                        <view class="">
+                            {{item[0]}}
+                        </view>
+                    </view>
+                    <input type="digit" disabled="{{index==1?false:true}}" class="{{allIndex==index?'focus':index==0||index==2?'disabled':''}}" value="{{index==0?form.meanTemp:index==2?form.hotcft:''}}" name="{{item[1]}}" bindinput="bindInput" bindfocus="focus" bindblur="blur"
+                        placeholder="{{index==1?'室内为1.15，室外为1.25':''}}" data-index="{{index}}" />
+                </view>
+            </block>
+            <view class="item">
+                <view class="itemTxt">
+                    <view class="">
+                        保温材料导热系数 (W/(m.K))
+                    </view>
+                </view>
+                <!-- 下拉框 -->
+                <view class='com-selectBox'>
+                    <view class="com-titel">
+                        <view class='com-sContent' bindtap='selectToggle'>
+                            <input type="digit" class="selecktInput" value="{{nowText}}" bindinput="selectInput" />
+
+                            <image src='../../image/down.png' class='com-sImg' animation="{{animationData}}"></image>
+                            <view wx:if="{{nowText!=''}}" class='drxxnamepos'>{{showdrxxName}}</view>
+
+                        </view>
+                        <view class="store" bindtap="detail">
+                            了解详情
+                        </view>
+                    </view>
+                    <!-- 下拉内容 -->
+                    <view class='com-sList' wx:if="{{selectShow}}">
+                        <block wx:for="{{select}}" wx:key="{{indexs}}">
+                            <view class="com-sItem" bindtap="mySelect" data-index="{{index}}">
+                                <image class="select-img" mode='aspectFit' src="{{item[0]}}">
+                                </image>
+                                <view class="com-txt">
+                                    {{item[1]}}
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+
+            </view>
+            <view class="item">
+                <view class="itemTxt">
+                    <view class="">
+                        保温层厚度 （mm）
+                    </view>
+                </view>
+                <input type="digit" class="disabled" disabled='true' value="{{form.hpPly}}" bindfocus="focus" bindblur="blur" />
+            </view>
+
+            <view class="form-sub">
+                <button class="submit" form-type="submit" bindtap="submit">开始计算</button>
+            </view>
+        </form>
+        <view class="footer">
+            <view class="give" bindtap="give">
+                我要打赏
+            </view>
+            <view class="">
+                如果觉得还不错，请多支持鼓励哦！
+            </view>
+        </view>
+    </scroll-view>
+</view>

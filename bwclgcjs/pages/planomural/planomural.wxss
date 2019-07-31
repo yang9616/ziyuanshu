@@ -1,0 +1,50 @@
+/* pages/planomural/planomural.wxss */
+
+
+/* pages/pipelineCount/pipelineCount.wxss */
+
+.homePage {
+    display: flex;
+    /* align-items: center; */
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.logo {
+    width: 300rpx;
+    height: 74rpx;
+    margin: 54rpx 0 42rpx 0
+}
+
+.content {
+    width: 566rpx;
+    height: 740rpx;
+    background: #f2f6fb;
+    border-radius: 10rpx;
+    text-align: center;
+    padding: 64rpx 0;
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    width: 480rpx;
+    height: 70rpx;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 16rpx;
+    background: -webkit-linear-gradient(top, #00be74, #016aa4);
+    margin-bottom: 28rpx;
+}
+
+.itemImg {
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+}

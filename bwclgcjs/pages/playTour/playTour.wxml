@@ -1,0 +1,49 @@
+<view>
+    <view class="header">
+        <image class="logo" src="../../image/logo_03.png">
+        </image>
+    </view>
+    <view class="content">
+        <view class="" wx:for="{{price}}" wx:key="{{index}}">
+            <view bindtap="active" class="item {{key==index?'active':''}}" data-index="{{index}}">
+                <view class="num">
+                    {{item}}
+                </view>
+                <view class="yuan">
+                    元
+                </view>
+            </view>
+        </view>
+    </view>
+    <button class="btn" bindtap="powerDrawer" data-statu="open">其他金额</button>
+    <button class="btn atOnce" bindtap="submit">立即打赏</button>
+    <view class="footer">
+        赞赏金将支付给作者，平台收取2%服务费
+    </view>
+    <!-- 弹窗 -->
+    <!--mask-->
+    <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+    <!--content-->
+    <!--使用animation属性指定需要执行的动画-->
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+        <!--drawer content-->
+        <view class="model-titel">
+            <view>
+            </view>
+            <view class="drawer_title">输入金额</view>
+            <view class="close" bindtap="close" data-statu="close">
+                X
+            </view>
+        </view>
+        <view class="drawer_content">
+            <view class="top grid">
+                <label class="title col-0">金额（元）</label>
+                <input type="digit" class="input_base input_h30 col-1" name="rName" placeholder="可填写1-1000" bindinput="money"></input>
+            </view>
+            <view class="hint">{{hint}}</view>
+        </view>
+        <button class="btn_ok" bindtap="sure" data-statu="close">打赏</button>
+        <!-- <view >确定</view> -->
+    </view>
+
+</view>

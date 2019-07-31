@@ -1,0 +1,65 @@
+<view class="all">
+    <scroll-view class="" scroll-y>
+        <view class="header">
+            <view class="logo">
+                <image class="headerImg" src="../../image/small-logo2_03.png">
+                </image>
+                <view class="">
+                    工程量计算
+                </view>
+            </view>
+        </view>
+        <view class="explain">
+            所有公式均参考DL/T5072，保温材料损耗附加量为5%，外护材料损耗附加量为25%
+        </view>
+        <!-- 错误提示 -->
+        <view class="error" wx:if="{{error}}" bindtap="close">
+            <view class="err-content">
+                <view class="icon">
+                    X
+                </view>
+                <view class="">
+                    {{errIndex==1?err1:err2}}
+                </view>
+            </view>
+
+        </view>
+        <form class="form">
+            <block wx:for="{{itemTxtStart}}" wx:key="{{index}}">
+                <view class="item">
+                    <view class="itemTxt">
+                        <view class="start">
+                            *
+                        </view>
+                        <view class="">
+                            {{item[0]}}
+                        </view>
+                    </view>
+                    <input type="digit" class="{{startIndex==index?'focus':''}}" bindfocus="startFocus" bindblur="startBlur" bindinput="startInput" name="{{item[1]}}" data-index="{{index}}" />
+                </view>
+            </block>
+            <block wx:for="{{itemTxt}}" wx:key="{{index}}">
+                <view class="item">
+                    <view class="itemTxt">
+                        <view class="">
+                            {{item[0]}}
+                        </view>
+                    </view>
+                    <input type="digit" disabled="{{index==2?false:index==3?false:true}}" class="{{allIndex==index?'focus':index==0||index==1||index==4||index==5||index==6?'disabled':''}}" value="{{index==0?form.num:index==4?form.mtlPrice:index==1?form.mDosage:index==5?form.mPrice:index==6?form.allPrice:''}}"
+                        name="{{item[1]}}" bindinput="bindInput" bindfocus="focus" bindblur="blur" data-index="{{index}}" />
+                </view>
+            </block>
+            <view class="form-sub">
+                <button class="submit" bindtap="submit">开始计算</button>
+            </view>
+        </form>
+        <view class="footer">
+            <view class="give" bindtap="give">
+                我要打赏
+            </view>
+            <view class="">
+                如果觉得还不错，请多支持鼓励哦！
+            </view>
+        </view>
+    </scroll-view>
+</view>

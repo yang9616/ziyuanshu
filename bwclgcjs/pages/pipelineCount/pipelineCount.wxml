@@ -1,0 +1,61 @@
+<view class="homePage" style="background: url('https://static.pengyaou.com/admin/uploadfile/thumb/bgd_02.jpg');background-repeat: no-repeat;background-size: 100% 100%;background-position: center bottom;">
+    <view class="">
+        <image class="logo" src="../../image/logo3_03.png">
+        </image>
+        <view class="content">
+            <view class="">
+                <view class="item" bindtap="pipingInsulationOne">
+                    <image class="itemImg" src="../../image/icon_07.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                    <view class="itemTxt" selectable="false" space="false" decode="false">
+                        已知允许保温层热损失，计算保温厚度
+                    </view>
+                </view>
+                <view class="item" bindtap="pipingInsulationTwo">
+                    <image class="itemImg" src="../../image/icon_07.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                    <view class="itemTxt" selectable="false" space="false" decode="false">
+                        已知保温层表面温度，计算保温厚度
+                    </view>
+                </view>
+                <view class="item" bindtap="pipingInsulationThree">
+                    <image class="itemImg" src="../../image/icon_07.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                    <view class="itemTxt" selectable="false" space="false" decode="false">
+                        保温层热损失计算
+                    </view>
+                </view>
+                <view class="item" bindtap="pipingInsulationFour">
+                    <image class="itemImg" src="../../image/icon_07.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                    <view class="itemTxt" selectable="false" space="false" decode="false">
+                        保温层外表温度计算
+                    </view>
+                </view>
+                <view class="item" bindtap="pipingInsulationFive">
+                    <image class="itemImg" src="../../image/icon_07.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                    <view class="itemTxt" selectable="false" space="false" decode="false">
+                        允许温度降下的保温厚度计算
+                    </view>
+                </view>
+                <view class="item" bindtap="pipingInsulationSix">
+                    <image class="itemImg" src="../../image/icon_07.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                    <view class="itemTxt" selectable="false" space="false" decode="false">
+                        已知保温厚度，计算管线终端温度
+                    </view>
+                </view>
+                <view class="item" bindtap="pipingInsulationSeven">
+                    <image class="itemImg" src="../../image/icon_07.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                    </image>
+                    <view class="itemTxt" selectable="false" space="false" decode="false">
+                        直埋蒸汽管道保温厚度计算
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+
+</view>
